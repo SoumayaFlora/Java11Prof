@@ -1,0 +1,28 @@
+Q1) Given:
+
+public void x() {
+  var x;
+}
+
+What is the result?
+
+A) Compilation fails
+B) Exception at runtime
+C) x is an int with value zero
+D) x is an Object ref with value null
+E) x is an Object ref with undefined value
+
+Q2) Given:
+
+public void x() {
+  var x = 99;
+  x = "Hello";
+}
+
+What is the result?
+
+A) Compilation fails
+B) Exception at runtime
+C) x becomes "Hello"
+D) x remains 99
+

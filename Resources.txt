@@ -2,7 +2,7 @@ Resources
 ---------
 
 Quiztool:
-http://ubuntu@ec2-54-191-237-229.us-west-2.compute.amazonaws.com/quiz-tool/
+http://ubuntu@ec2-54-191-237-229.us-west-2.compute.amazonaws.com:8080/quiz-tool/
 Github repo (remember this will vanish in two weeks)
 https://github.com/SimonHGR/SafariJava11Cert
 
