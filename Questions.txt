@@ -26,3 +26,14 @@ B) Exception at runtime
 C) x becomes "Hello"
 D) x remains 99
 
+Q2) Given:
+
+public void x(var x) {
+  x = "Hello";
+}
+
+What is the result?
+
+
+
+
