@@ -9,6 +9,10 @@ public class Overloads {
     System.out.println("v var");
   }
 
+  void doStuff(long x) {
+    System.out.println("v one long");
+  }
+
   void doStuff(Integer x, int y) {
     System.out.println("v2");
   }
@@ -18,6 +22,6 @@ public class Overloads {
   }
 
   public static void main(String[] args) {
-    new Overloads().doStuff(1, 1);
+    new Overloads().doStuff(1);
   }
 }

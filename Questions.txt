@@ -193,7 +193,17 @@ C) v1
 D) v2
 E) v3
 
+Q23) Given:
 
+class MyClass {
+  private int x = 99;
+}
+what is the visibility of x?
+A) Invisible
+B) Compilation error
+C) Only in the class/objects MyClass
+D) Inside the curly braces
+E) Inside the class and the package
 
 
 
