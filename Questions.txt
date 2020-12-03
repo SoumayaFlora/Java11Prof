@@ -205,6 +205,12 @@ C) Only in the class/objects MyClass
 D) Inside the curly braces
 E) Inside the class and the package
 
+Q24) Which are legal (individually):
+A) Predicate<Student> sc = Student s -> { return s.getGpa() > 3;};
+B) Predicate<Student> sc = s -> { s.getGpa() > 3 };
+C) Object sc = s -> {return s.getGpa() > 3;};
+D) Predicate<Student> sc = (s) -> s.getGpa() > 3;
+E) Predicate<Student> sc = s -> s.getCourses().size();
 
 
 

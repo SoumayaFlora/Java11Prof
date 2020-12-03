@@ -41,6 +41,7 @@ public class MyList2<E> implements Iterable<E> {
 
       @Override
       public boolean hasNext() {
+//        this.
         return progress < count;
       }
 
@@ -51,9 +52,3 @@ public class MyList2<E> implements Iterable<E> {
     };
   }
 }
-/*
-A) VERY
-E) Nah, I got this..
- */
-*/
- */
