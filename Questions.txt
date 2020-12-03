@@ -26,13 +26,177 @@ B) Exception at runtime
 C) x becomes "Hello"
 D) x remains 99
 
-Q2) Given:
+Q3) Given:
 
 public void x(var x) {
   x = "Hello";
 }
 
 What is the result?
+
+A) Compilation fails
+B) Exception at runtime
+C) x becomes "Hello"
+
+Q4) Given:
+
+StringBuilder sb1 = new StringBuilder("Hello World");
+String s1 = "Hello World";
+sout...(s1.equals(sb1));
+
+What is the result?
+
+A) Compilation fails
+B) true
+C) false
+D) Exception
+
+Q5) Given:
+
+StringBuilder sb1 = new StringBuilder("Hello World");
+StringBuilder sb2 = new StringBuilder("Hello World");
+sout...(sb2.equals(sb1));
+
+What is the result?
+
+A) Compilation fails
+B) true
+C) false
+D) Exception
+
+Q5) Given:
+
+StringBuilder sb1 = new StringBuilder("Hello World");
+StringBuilder sb2 = new StringBuilder("Hello World");
+sout...(sb2.equals(sb1));
+
+What is the result?
+
+A) Compilation fails
+B) true
+C) false
+D) Exception
+
+Q6) Given
+
+short s1 = 99;
+short s2 = 300;
+(trueFunction()) ? s1 : s2
+
+Which are true?
+
+A) The type of the expression is int
+B) The type of the expression is short
+C) The value of the expression is 300
+D) The value of the expression is 99
+E) The expression would fail to compile
+
+Q7) Given:
+
+int x = 99;
+switch(x) {
+case 99: sout("ninetynine");
+case 100: sout(100);
+}
+
+What is the result?
+A) Compilation fails because there is no "default" clause
+B) ninetynine
+C) No output
+D) ninetynine
+   100
+E) Runtime exception
+
+Q8) Given:
+switch (x) {
+}
+
+Which are valid types for "x":
+
+A) short
+B) int
+C) long
+D) enum
+E) StringBuilder
+
+Q9) Given:
+
+int x = 3;
+int y = 0;
+outer: while (x < 10) {
+  x = y++;
+inner:  while(y < 2) {
+       if (++x > 2) {
+          //continue outer; // line n1
+          break inner;
+       }
+    }
+// nothing here..
+}
+
+Which is true?
+
+A) the output is lkjsdlkfjlsdkj
+B) the output is lkjasfkljsd
+C) if line n1 were replaced with break inner, the output would be unchanged.
+
+Q10) Given:
+
+try {
+  FileReader fr = ...
+  // file reading operations...
+} catch (IOException ioe) {
+} finally {
+  fr.close();
+}
+
+Which are true?
+
+A) The file fr is closed, only if code succeed, or an IOException is thrown
+B) The file fr is close, only if the code succeeds or a non-IOException is thrown
+C) The file fr is always closed
+D) The file fr is never closed
+
+Q21) Given:
+public class Scr { 
+  static int x = -1;
+  public static void main(String[] args) { new ScrSub().doStuff(); }
+}
+and:
+class ScrSub extends Scr {
+  int x = 99;
+  void doStuff() {
+    System.out.print(x + ","); // line n1
+    int x = 100;
+    System.out.print(x + ",");
+    System.out.print(Scr.x + ",");
+  }
+}
+What is the result?
+A) Compilation fails at line n1
+B) Exception at line n1
+C) 99, 100, -1
+D) 0, 100, 99
+E) 0, 100, -1
+
+Q22) Given:
+void doStuff(int x, long y) { sout...("v1"); }
+void doStuff(long x, long y) { sout...("v2"); }
+void doStuff(String x, long y) { sout...("v3"); }
+
+and:
+doStuff(1, 1);
+What is the result?
+A) Compilation fails
+B) Exception
+C) v1
+D) v2
+E) v3
+
+
+
+
+
 
 
 
