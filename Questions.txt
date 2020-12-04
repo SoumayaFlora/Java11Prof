@@ -294,11 +294,6 @@ C) Sub doBaseStuff() { return null; }
 D) CharSequence doBaseStuff() { return null; }
 E) Sub doBaseStuff() { return null; }
 
-
-
-
-
-
 Q30)
 Given:
   class Base {
@@ -309,10 +304,10 @@ Given:
   }
 Which may be added individually to the class Sub?
 
-A) int doBaseStuff() { return null; }
+A) int doBaseStuff() { return 0; }
 B) long doBaseStuff() { return x * 2; }
 C) Sub doBaseStuff() { return null; }
-D) short doBaseStuff() { return null; }
+D) short doBaseStuff() { return (short)2; }
 E) Sub doBaseStuff() { return null; }
 
 
