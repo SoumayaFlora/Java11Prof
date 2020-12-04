@@ -206,14 +206,113 @@ D) Inside the curly braces
 E) Inside the class and the package
 
 Q24) Which are legal (individually):
-A) Predicate<Student> sc = Student s -> { return s.getGpa() > 3;};
-B) Predicate<Student> sc = s -> { s.getGpa() > 3 };
-C) Object sc = s -> {return s.getGpa() > 3;};
-D) Predicate<Student> sc = (s) -> s.getGpa() > 3;
-E) Predicate<Student> sc = s -> s.getCourses().size();
+No A) Predicate<Student> sc = Student s -> { return s.getGpa() > 3;};
+No B) Predicate<Student> sc = s -> { s.getGpa() > 3 };
+No C) Object sc = s -> {return s.getGpa() > 3;};
+Yes D) Predicate<Student> sc = (s) -> s.getGpa() > 3;
+No E) Predicate<Student> sc = s -> s.getCourses().size();
+
+Q25) Which are legal individually:
+No A) Function<String, String> fss = s -> { System.out.println(s); };
+Yes B) Consumer<String> cs = s -> { System.out.println(s); };
+No C) Supplier<String> ss = (s1, s2) -> s1 + s2;
+No D) BiPredicate<String> bps = (String s) -> { return s.length() > 0; };
+Yes E) ToIntFunction<String> tofs = s -> s.length();
+
+--------------------------------
+Given:
+  class Base {
+    void doBaseStuff() { System.out.println("doBaseStuff"); }
+  }
+
+  class Sub extends Base {
+    void doBaseStuff() { System.out.println("doSubStuff"); }
+    void doOtherStuff() { System.out.println("doOtherStuff"); }
+  }
+
+Q26) and:
+    Base b = new Base();
+    Sub s = (Sub)b;
+    s.doOtherStuff();
+
+What is the result?
+    A) doSubStuff
+    B) doOtherStuff
+    C) doBaseStuff
+    D) Exception at runtime
+    E) Compilation failure
+
+Q27)
+  class Base {
+    void doBaseStuff() { System.out.println("doBaseStuff"); }
+  }
+
+  class Sub extends Base {
+    void doBaseStuff() { System.out.println("doSubStuff"); }
+    void doOtherStuff() { System.out.println("doOtherStuff"); }
+  }
+
+ In the Base and Sub classes, which are true in isolation?
+    A) doBaseStuff in Base can be marked public without causing errors
+    B) doBaseStuff in Base can be marked private without causing errors
+    C) doBaseStuff in Sub can be marked public without causing errors
+    D) doBaseStuff in Sub can be marked protected without causing errors
+    E) doBaseStuff in Sub can be marked private without causing errors
+
+
+Q28)
+  class Base {
+    void doBaseStuff() { System.out.println("doBaseStuff"); }
+  }
+
+  class Sub extends Base {
+    void doBaseStuff() { System.out.println("doSubStuff"); }
+    void doOtherStuff() { System.out.println("doOtherStuff"); }
+  }
+
+ In the Base and Sub classes, which are true in isolation?
+    A) doBaseStuff in Base can be marked throws Exception without causing errors
+    B) doBaseStuff in Base can be marked throws RuntimeException without causing errors
+    C) doBaseStuff in Sub can be marked throws Exception without causing errors
+    D) doBaseStuff in Sub can be marked throws RuntimeException without causing errors
+    E) if doBaseStuff in Base were marked throws Exception,
+       then doBaseStuff in Sub can be marked throws IOException without causing errors
+
+Q29)
+Given:
+  class Base {
+    Base doBaseStuff() { return null; }
+  }
+
+  class Sub extends Base {
+  }
+Which may be added individually to the class Sub?
+
+A) Base doBaseStuff() { return null; }
+B) int doBaseStuff(int x) { return x * 2; }
+C) Sub doBaseStuff() { return null; }
+D) CharSequence doBaseStuff() { return null; }
+E) Sub doBaseStuff() { return null; }
 
 
 
 
+
+
+Q30)
+Given:
+  class Base {
+    int doBaseStuff() { return 0; }
+  }
+
+  class Sub extends Base {
+  }
+Which may be added individually to the class Sub?
+
+A) int doBaseStuff() { return null; }
+B) long doBaseStuff() { return x * 2; }
+C) Sub doBaseStuff() { return null; }
+D) short doBaseStuff() { return null; }
+E) Sub doBaseStuff() { return null; }
 
 
