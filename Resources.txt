@@ -40,3 +40,9 @@ Java 11 API documentation:
  - https://docs.oracle.com/en/java/javase/11/docs/api/index.html
 Java tutorial (Java 8 only, sadly, but excellent for all core material)
  - https://docs.oracle.com/javase/tutorial/
+
+Java Serialization Architecture
+https://docs.oracle.com/javase/7/docs/platform/serialization/spec/serial-arch.html
+Brian Goetz serialization thoughts
+https://cr.openjdk.java.net/~briangoetz/amber/serialization.html
+

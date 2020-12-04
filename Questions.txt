@@ -310,4 +310,42 @@ C) Sub doBaseStuff() { return null; }
 D) short doBaseStuff() { return (short)2; }
 E) Sub doBaseStuff() { return null; }
 
+Q31)
+        StringBuilder sb1 = new StringBuilder("Hello");
+        StringBuilder sb2 = sb1;
+        sb1 = null;
+
+Which is true?
+    A) sb1 is unreferenced and eligible for GC
+    B) sb1 and sb2 are unreferenced and eligible for GC
+    C) No objects are eligible for GC
+    
+Q32)
+StringBuilder sb1 = new StringBuilder("Hello");
+        StringBuilder sb2 = new StringBuilder("World");
+        sb1 = null;
+        sb2 = sb1;
+
+Which is true?
+    A) Object containing "Hello" is unreferenced and eligible for GC
+    B) Object containing "World" is unreferenced and eligible for GC
+    C) Object containing "Hello", and "World" are both unreferenced and eligible for GC
+    D) No objects are eligible for GC
+
+Q33)
+Given:
+module first {
+  exports my.stuff;
+}
+Which would allow module second to use class my.stuff.Banana
+
+A) module second { requires my.stuff; }
+B) module second { requires Banana; }
+C) module second { uses my.stuff.Banana; } 
+D) module second { requires first; } 
+E) module second { opens first; }
+
+
+
+
 
