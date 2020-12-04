@@ -1,0 +1,3 @@
+module Consumer {
+  requires Provider;
+}

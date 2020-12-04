@@ -12,7 +12,8 @@ public class AnnotationHunter {
       System.out.println(f);
       MyAnnotation annot = f.getAnnotation(MyAnnotation.class);
       if (annot != null) {
-        System.out.println(" **** ANNOTATED!!!");
+        System.out.println(" **** ANNOTATED!!! count is " + annot.count());
+        System.out.println(" --  and value is " + annot.value());
       }
     }
   }
